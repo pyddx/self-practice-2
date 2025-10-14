@@ -4,7 +4,7 @@ let el = document.getElementById("demo")
 // แสดงผลข้อความภายในแบบต่าง ๆ
 console.log(el.innerHTML)   // แสดง HTML ทั้งหมดใน div (รวมแท็ก)
 console.log(el.innerText)   // แสดงเฉพาะข้อความที่มองเห็นบนหน้าเว็บ
-console.log(el.textContent) // แสดงข้อความทั้งหมด รวมถึงที่ซ่อนอยู่
+console.log(el.textContent) // แสดงข้อความทั้งหมด รวมถึงที่ซ่อนอยู่ 
 
 // 2. สร้าง <p> ใหม่ แล้วใส่เนื้อหาแบบต่างกัน
 let p = document.createElement("p");
