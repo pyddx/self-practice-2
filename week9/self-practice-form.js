@@ -1,34 +1,44 @@
-// 1. เลือก Input Fields และ Feedback Message
-const form = document.querySelector('form');
-const nameInput = document.getElementById('fullName');
-const pinInput = document.getElementById('pinCode');
-const rePinInput = document.getElementById('confirmPin');
-const messageArea = document.querySelector('.feedback-message'); // พื้นที่แสดงข้อความ
+// 1.
+const keyInput = document.getElementById('keyInput');
+const keyLog = document.getElementById('keyLog');
+ 
+keyInput.addEventListener('keydown', (event) => {
+    const message = document.createElement('p');
+ 
+    message.textContent = `You pressed: ${event.key}`;
+    if (event.key === 'Enter') {
+        message.style.color = 'blue';
+    } else {
+        message.style.color = 'black';
+    }
+ 
+    keyLog.appendChild(message);
+});
 
-// 2. Event Listener สำหรับการกดปุ่ม Submit (ปุ่มอยู่ใน form)
-form.addEventListener('submit', (e) => {
-  e.preventDefault(); // หยุดการส่ง Form แบบปกติ (สำคัญมาก)
- 
-  const name = nameInput.value.trim();
-  const pin = pinInput.value.trim();
-  const rePin = rePinInput.value.trim();
- 
-  // ตรวจสอบ: ข้อมูลว่างเปล่าหรือไม่
-  if (!name || !pin || !rePin) {
-    messageArea.textContent = 'กรุณากรอกข้อมูลให้ครบทุกช่อง';
-    messageArea.style.color = 'red';
-    return; // หยุดการทำงานถ้าข้อมูลไม่ครบ
-  } 
-  
-  // ตรวจสอบ: รหัส Pin ตรงกันหรือไม่
-  if (pin !== rePin) {
-    messageArea.textContent = 'รหัส Pin ไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง';
-    messageArea.style.color = 'red';
-    return;
-  } 
-  
-  // สำเร็จ
-  messageArea.textContent = 'ลงทะเบียนสำเร็จ! ข้อมูลถูกต้อง';
-  messageArea.style.color = 'green';
-  form.reset(); // ล้างข้อมูลใน Form
+// 2.
+const usernameInput = document.getElementById('username');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+const feedbackMessage = document.querySelector('p');
+ 
+document.querySelector('button[type="submit"]').addEventListener('click', (e) => {
+  e.preventDefault();
+ 
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+  const confirmPassword = confirmPasswordInput.value.trim();
+ 
+  if (!username || !email || !password || !confirmPassword) {
+    feedbackMessage.textContent = 'Missing some values, please try again!';
+    feedbackMessage.style.color = 'red';
+  } else if (password !== confirmPassword) {
+    feedbackMessage.textContent = 'Password and confirm do not match, check again';
+    feedbackMessage.style.color = 'red';
+  } else {
+    feedbackMessage.textContent = 'Your data is completed!';
+    feedbackMessage.style.color = 'green';
+    document.querySelector('form').reset();
+  }
 });

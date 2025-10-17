@@ -1,0 +1,14 @@
+1.เข้าถึง element ใน HTML ที่มี id="keyInput" (เช่น <input>) และ id="keyLog" (เช่น <div> หรือ <p>)keyInput = ช่องให้พิมพ์ข้อความ keyLog = ที่จะเอาไว้แสดงผลว่าเรากดปุ่มอะไร
+ใช้ addEventListener('keydown', ...) เพื่อ “ฟัง” เหตุการณ์เวลาผู้ใช้ กดปุ่มใด ๆ ในช่อง input ทุกครั้งที่กด จะสร้าง <p> ใหม่ 1 อันไว้ใช้แสดงข้อความ
+event.key คือชื่อของปุ่มที่ผู้ใช้กด เช่น "a", "Enter", "Shift" เป็นต้น ใส่ข้อความลงไปใน <p> เช่น → “You pressed: a” ถ้าปุ่มที่กดคือ Enter ข้อความเป็นสีน้ำเงิน ถ้าไม่ใช่ สีดำ
+เอา <p> ที่สร้างขึ้นมา เพิ่มเข้าใน element keyLog ผลคือทุกครั้งที่พิมพ์ปุ่มใดๆ จะมีข้อความใหม่ขึ้นมา
+
+2.inputField → เก็บ reference ของ <input> หรือ <textarea> ที่ผู้ใช้พิมพ์
+logDisplay → เก็บ reference ของ <div> ที่จะแสดง log ของปุ่มที่ถูกกด
+ใช้ keydown เพื่อจับทุกครั้งที่ผู้ใช้กดปุ่มบนคีย์บอร์ด
+event คือ object ที่เก็บข้อมูลของปุ่มที่ถูกกด เช่น key, code, shiftKey
+event.key → ชื่อปุ่ม เช่น 'a', 'Enter', ' '
+event.code → รหัสปุ่มมาตรฐาน เช่น 'KeyA', 'Enter', 'Space'
+ผลลัพธ์ตัวอย่าง: Key Pressed: a (Code: KeyA)
+ถ้ากด Spacebar (event.code === 'Space') → แสดงข้อความเป็น สีน้ำเงิน และเพิ่มคำว่า [Special Key]
+ถ้าไม่ใช่ Space → แสดงเป็น สีเทา

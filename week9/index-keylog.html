@@ -2,23 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Key Log Practice</title>
-    <style>
-        #logContainer {
-            margin-top: 10px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            height: 150px;
-            overflow-y: scroll;
-            font-family: monospace;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label for="typingArea">Type here:</label>
-    <input type="text" id="typingArea" placeholder="Press any key..." />
-    <div id="logContainer">Log:</div>
+    <form action="#" method="post">
+      <h2>Sign Up</h2>
 
-    <script src="self-practice-keylog.js"></script>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+      />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+      />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        placeholder="Re-enter password"
+      />
+
+      <button id="submit" type="submit">Create Account</button>
+      <p></p>
+    </form>
+
+    <script src="source-code_week09.js"></script>
   </body>
 </html>
