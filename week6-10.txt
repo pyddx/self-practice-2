@@ -1,0 +1,20 @@
+เหตุการณ์ที่เกิดขึ้นในหน้าเว็บ เช่น click, keydown, mousemove, input
+ใช้ addEventListener() เพื่อ “ฟัง” เหตุการณ์ และกำหนดสิ่งที่ต้องทำเมื่อเกิดเหตุการณ์นั้น
+เข้าใจ event propagation (capturing / bubbling) → ลำดับการส่ง event จาก parent → child แล้วย้อนกลับ
+localStorage ใช้เก็บข้อมูลไว้ใน browser โดยไม่หายเมื่อปิดหน้าเว็บ
+localStorage.setItem('key', 'value') → บันทึก
+localStorage.getItem('key') → ดึงข้อมูล
+localStorage.removeItem('key') → ลบข้อมูล
+localStorage.clear() → ลบทั้งหมด
+ใช้ event เช่น keydown, keyup, keypress เพื่อจับเวลาผู้ใช้กดปุ่ม
+ใช้ event.key เพื่อรู้ว่าปุ่มไหนถูกกด
+ใช้ event.code เพื่อรู้รหัสมาตรฐานของปุ่ม
+nnerHTML → อ่าน/เขียน “รวมแท็ก”
+innerText → แสดงเฉพาะข้อความที่มองเห็น
+textContent → แสดงทุกข้อความ แม้จะถูกซ่อน
+เข้าถึงปุ่มผ่าน data-* attribute เช่น data-color="red"
+ใช้ element.dataset.color เพื่ออ่านค่า
+ใช้ classList เพื่อเพิ่ม / ลบ / สลับคลาสใน CSS
+ใช้ loop (while) เพื่อให้เดาซ้ำจนกว่าจะถูก
+ใช้ if / else if / else เพื่อตรวจสอบเงื่อนไข
+ใช้ random เพื่อสร้างเลขสุ่ม

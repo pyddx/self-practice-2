@@ -1,0 +1,21 @@
+1.font size small,medium,large - dropdown ให้กำหนดตัวเลขแต่ละขนาด เมื่อsave ให้บันทึกไว้ในlocalstorageเมื่อเปิดหน้าเว็บใหม่ให้ดึงค่าบันทึกว่าแสดง เพิ่มปุ่มresetเพื่อล้างค่าในlocalstorage
+
+2.สร้างหน้าเว็บที่มี <div> 3 ชั้น ซ้อนกันดังนี้ outer → middle → inner
+ให้แต่ละ div มี event listener สำหรับ click โดย
+outer ทำงานใน capturing phase
+middle และ inner ทำงานใน bubbling phase
+เมื่อคลิกที่ inner ให้แสดงลำดับของ event ที่เกิดขึ้นใน console
+
+3.สร้าง <input type="text" id="message"> และ <p id="display"></p>
+เมื่อผู้ใช้พิมพ์ข้อความแล้วกด Enter, ให้แสดงข้อความที่พิมพ์ไว้ในแท็ก <p>
+Hello World
+ใช้ keyup event เพื่อจับตอนปล่อยปุ่ม
+ตรวจสอบด้วย if (event.key === 'Enter')
+ใช้ event.target.value เพื่อดึงค่าจากกล่องข้อความ
+
+4.สร้าง <div id="area">Move your mouse here</div> และ <p id="info"></p>
+เมื่อเคลื่อนเมาส์เหนือกล่อง div, ให้แสดงพิกัด X, Y ของเมาส์ภายใน <p>
+Mouse position: X = 150, Y = 240
+ใช้ mousemove event เพื่อติดตามตำแหน่งเคอร์เซอร์
+ใช้ event.clientX และ event.clientY เพื่อหาพิกัด
+เข้าใจการทำงานของ Event Object เช่น type, target, clientX, clientY

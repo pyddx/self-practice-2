@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WEB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 16px; 
+            padding: 20px;
+        }
+        label, select, input, button {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>WEB</h1>
+
+    <label for="fontSize">Font Size:</label>
+    <select id="fontSize">
+        <option value="12px">small</option>
+        <option value="16px" selected>medium</option>
+        <option value="20px">large</option>
+    </select>
+
+    <label for="backgroundColor">Background-Color:</label>
+    <input type="color" id="backgroundColor" value="#ffffff" />
+
+    <label for="fontColor">Font color:</label>
+    <input type="color" id="fontColor" value="#000000" />
+
+    <button id="saveBtn">Save</button>
+    <button id="resetBtn">Reset</button>
+<script src="code-week10.js" type="module"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling & Capturing</title>
+  <style>
+    #outer, #middle, #inner {
+      padding: 30px;
+      border: 2px solid black;
+      text-align: center;
+    }
+    #outer { background-color: lightblue; }
+    #middle { background-color: lightgreen; }
+    #inner { background-color: lightcoral; }
+  </style>
+</head>
+<body>
+  <div id="outer">
+    Outer
+    <div id="middle">
+      Middle
+      <div id="inner">Inner (click me)</div>
+    </div>
+  </div>
+
+  <script src="code-week10.js" type="module"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Event Example</title>
+</head>
+<body>
+  <h3>พิมพ์ข้อความแล้วกด Enter</h3>
+  <input type="text" id="message" placeholder="Type something...">
+  <p id="display"></p>
+
+  <script src="code-week10.js" type="module"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Event Example</title>
+  <style>
+    #area {
+      width: 300px;
+      height: 200px;
+      background-color: lightyellow;
+      border: 2px solid black;
+      text-align: center;
+      line-height: 200px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="area">Move your mouse here</div>
+  <p id="info"></p>
+
+  <script src="code-week10.js" type="module"></script>
+</body>
+</html>
